@@ -1,0 +1,897 @@
+/*fontes usadas*/
+@font-face {
+  font-family: 'Merriweather-Regular';
+  src: url('Merriweather-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'EngraversGothic BT';
+  src: url('EngraversGothicBT.ttf');
+}
+
+@font-face {
+  font-family: 'Copperplate Gothic Bold';
+  src: url('COPRGTB.ttf');
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: inherit;
+}
+
+/* Mudando a barra de rolagem*/
+::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #fafafa;
+  width: 7px;
+}
+
+/*Barra Vertical*/
+::-webkit-scrollbar-thumb:vertical {
+  background-color: #054599;
+  border-radius: 5px;
+}
+
+/*Barra horizontal*/
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: #054599;
+  border-radius: 0px;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+body,
+ul {
+  margin: 0%;
+  padding: 0%;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 90px;
+  align-items: inline-table;
+  background-image: linear-gradient(to right, #e3701f, #83516c, #054599);
+  border: none;
+}
+
+
+#logoimg {
+  height: 5rem;
+  width: 5.5rem;
+  padding-top: 0.2rem;
+  padding-left: 0.5rem;
+}
+
+#logoimg:hover {
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.5);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.5);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.5);
+  transition: all 200ms ease-in;
+  transform: scale(1.1);
+}
+
+#hamburguer {
+  list-style: none;
+}
+
+#MENU li {
+  display: inline-table;
+  float: left;
+  list-style: none;
+  text-align: center;
+  margin-top: 1.5vw;
+  padding: 5px;
+  visibility: visible;
+}
+
+#menu li a {
+  font-size: 2vw;
+  font-family: "EngraversGothic BT";
+  text-decoration: none;
+  color: #fafafa;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.itensmenu:hover {
+  transition-duration: 0.4s;
+  transition-delay: 0.1s;
+  transition-timing-function: ease;
+  transition-property: all;
+  border-bottom: 1px double #fafafa;
+  border-radius: 8px;
+}
+
+#contatoMenu {
+  height: auto;
+  margin: 0%;
+  align-items: flex-start;
+}
+
+#contatoMenu p {
+  font-size: 1.3vw;
+  font-family: "EngraversGothic BT";
+  display: table;
+  color: #fafafa;
+  padding-top: 3px;
+  padding-right: 11px;
+  text-align: right;
+  cursor: pointer;
+}
+
+#hamburg {
+  color: red;
+  margin-right: 2%;
+  width: 20%;
+  visibility: hidden;
+  transition: visibility 0.3s;
+  cursor: pointer;
+}
+
+#menu-lateral {
+  align-items: center;
+  z-index: 10;
+  width: 0%;
+  height: 100%;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  margin-left: 0%;
+  background-color: #054599;
+  transition: 0.5s;
+  padding-top: 10px;
+  text-align: center;
+  font-family: "Merriweather-Regular";
+
+}
+
+#menu-lateral a {
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-left: 40px;
+  text-decoration: none;
+  color: #fafafa;
+  border-bottom: #fafafa solid 1px;
+}
+
+#menu-lateral a:hover {
+  border-bottom: #afa8ac solid 1px;
+  font-size: 1.1rem;
+  color: #afa8ac;
+  transition-duration: 0.5s;
+  transition-delay: 0.1s;
+  transition-timing-function: ease;
+}
+
+#menu-lateral ul {
+  list-style: none;
+  margin-left: 0%;
+  left: 0%;
+}
+
+
+nav {
+  display: inline-table;
+  margin-left: 28%;
+  width: 55%;
+}
+
+#nmEmpresa,
+#subtitulo {
+  font-family: "Copperplate Gothic Bold";
+
+}
+
+
+
+#nmEmpresa {
+  font-size: 7vw;
+  color: #e3701f;
+  margin-top: 3%;
+  padding-top: 0%;
+  text-shadow: 1px 1px 7px #e3701f;
+  display: inline-block;
+  border-right: 2px solid #cccbcb;
+  max-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: pisca normal infinite .8s, escrever normal 6s steps(55) both;
+}
+
+@keyframes pisca {
+  100% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes escrever {
+  100% {
+    max-width: 100%;
+  }
+}
+
+#subtitulo {
+  font-size: 3vw;
+  color: #054599;
+  text-shadow: 2px 3px 7px #054599;
+}
+
+hr {
+  border: none;
+  height: 10px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: 2%;
+  margin-left: 2%;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #e3701f, #83516c, #054599);
+}
+
+#txtEntrada {
+  font-size: 1.5vw;
+  font-family: 'Merriweather-Regular';
+  color: #054599;
+  margin-bottom: 3%;
+}
+
+#img1 {
+  width: 57%;
+  height: 30vw;
+  float: right;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: 7px 3px 20px #000000a8;
+}
+
+#img1:hover {
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.5);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.5);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.5);
+  transition: all 200ms ease-in;
+  transform: scale(1.1);
+}
+
+#sobre2 {
+  position: relative;
+  width: 40%;
+  height: 45%;
+  font-size: 1.6vw;
+  text-align: right;
+  margin-left: 10%;
+  margin-top: 6%;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-family: 'Merriweather-Regular';
+}
+
+#sobre2:hover {
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.5);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.5);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.5);
+  transition: all 200ms ease-in;
+  transform: scale(1.1);
+}
+
+#txtEmpresa {
+  position: absolute;
+  z-index: 4;
+  background-color: #e3711ff5;
+  border-radius: 10px;
+  color: #fafafa;
+  text-shadow: 2px 3px 7px #b5563a;
+  box-shadow: 5px 3px 15px #000000b7;
+  font-family: 'Merriweather-Regular';
+  padding: 2%;
+}
+
+#planos {
+  background-color: #c6ddfda9;
+
+}
+
+#tituloPlanos {
+  font-size: 3.5rem;
+  font-family: "EngraversGothic BT";
+  margin-bottom: 1%;
+  padding-top: 3%;
+  color: #054599;
+  text-shadow: 0px 0px 4px #054599;
+}
+
+#planos2,
+#planos1 {
+  display: inline-table;
+  width: 75%;
+  height: 32%;
+  position: relative;
+}
+
+#planos2 {
+  margin-top: 1%;
+}
+
+.planosAzul {
+  display: inline-block;
+  width: 20%;
+  height: 70%;
+  border: solid 2px #054599;
+  box-shadow: 1px 1px 9px #054599;
+  margin: 4%;
+  border-top-left-radius: 60px;
+}
+
+.planosAzul:hover {
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.5);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.5);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.5);
+  transition: all 200ms ease-in;
+  transform: scale(1.1);
+}
+
+.planosLaranja {
+  border: solid 2px #e3701f;
+  box-shadow: 0px 0px 12px #e3701f;
+  width: 20%;
+  height: 70%;
+  display: inline-block;
+  position: relative;
+  border-top-left-radius: 60px;
+}
+
+.planosLaranja:hover {
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.5);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.5);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.5);
+  transition: all 200ms ease-in;
+  transform: scale(1.1);
+}
+
+.MBAzul,
+.MBlaranja {
+  font-family: "Copperplate Gothic Bold";
+  font-size: 2.5rem;
+}
+
+.MBazul {
+  color: #054599;
+  text-shadow: 0px 0px 4px #054599;
+}
+
+.MBlaranja {
+  color: #e3701f;
+  text-shadow: 0px 0px 4px #e3701f;
+}
+
+.valor {
+  font-family: "Copperplate Gothic Bold";
+  font-size: 2rem;
+  color: #83516c;
+
+}
+
+.mensal {
+  font-family: "EngraversGothic BT";
+  font-size: 1.1rem;
+  color: #83516c;
+}
+
+#info {
+  width: 100%;
+
+}
+
+.obs {
+  float: left;
+  margin-left: 5%;
+  width: 100%;
+  height: 5%;
+}
+
+.obs li {
+  list-style: inside;
+  font-family: "EngraversGothic BT";
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-left: 2%;
+
+}
+
+.pergunta {
+  border-bottom: 2px solid #e3701f;
+  padding: 10px 0;
+  width: 60%;
+  margin-left: 20%;
+  font-family: 'Merriweather-Regular';
+  text-align: left;
+  color: #b5563a;
+  margin-bottom: 1%;
+  text-align: left;
+
+}
+
+
+.pergunta input,
+.pergunta .resposta {
+  display: none;
+  text-align: center;
+  font-family: 'Merriweather-Regular';
+  color: #e3701f;
+}
+
+.pergunta,
+.resposta {
+  font-size: 1.4rem;
+}
+
+.pergunta label {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.pergunta input:checked~.resposta {
+  display: block
+}
+
+.seta {
+  width: 15px;
+  float: right;
+  cursor: pointer;
+}
+
+#titulofaq {
+  font-size: 3.5rem;
+  font-family: "EngraversGothic BT";
+  margin-bottom: 3%;
+  padding-top: 3%;
+  text-align: center;
+  color: #054599;
+  text-shadow: 0px 0px 3px #054599;
+}
+
+#wpp1 {
+  display: inline-flex;
+  margin-left: 9.3%;
+}
+
+#wpp1 img {
+  width: 39%;
+  padding-top: 9%;
+}
+
+#wpp1 h2 {
+  margin-right: 30%;
+  font-family: 'Merriweather-Regular';
+  color: #054599;
+}
+
+#txtwpp:hover {
+  color: #e3701f;
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.5);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.5);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.5);
+  transition: all 200ms ease-in;
+  transform: scale(1.1);
+}
+
+#wpp {
+  width: 80%;
+  display: inline-flex;
+  align-items: center;
+}
+
+#mapaEredes {
+  display: inline-flex;
+  width: 90%;
+  margin: 3%;
+  align-items: center;
+
+}
+
+#redes {
+  width: 7%;
+  margin-right: 3%;
+  margin-left: 7%;
+}
+
+.linkredes:hover {
+  transform: translateY(-8px);
+}
+
+#redes img {
+  width: 100%;
+}
+
+#mapa {
+  width: 70%;
+  height: 20rem;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  margin-left: 5%;
+}
+
+footer {
+  background-image: linear-gradient(to right, #e3701f, #83516c, #054599);
+  height: 13%;
+  align-items: center;
+}
+
+footer h5 {
+  font-size: 0.7rem;
+  font-family: 'Merriweather-Regular';
+  text-align: center;
+  color: #fafafa;
+}
+
+
+@media only screen and (max-width:1150px) {
+
+  #planos1,
+  #planos2 {
+    width: 100%;
+  }
+
+  #planosAzul,
+  #planosLaranja {
+    width: 22%;
+    height: auto;
+  }
+
+}
+
+@media only screen and (max-width:930px) {
+
+  #hamburg {
+    visibility: visible;
+    font-size: 40px;
+    margin-top: 25%;
+    color: #fafafa;
+    z-index: 10;
+  }
+
+
+  #MENU li {
+    visibility: hidden;
+  }
+
+  #contatoMenu p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width:900px) {
+
+  #planosAzul,
+  #planosLaranja {
+    width: 100%;
+  }
+
+  #img1 {
+    width: 55%;
+    height: 33vw;
+  }
+
+  #tituloPlanos {
+    padding-top: 1%;
+  }
+
+
+  #sobre2 {
+    width: 55%;
+    height: 40%;
+    font-size: 1.9vw;
+    margin-left: 3%;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+
+  .MBAzul,
+  .MBlaranja {
+    font-size: 1.8rem;
+  }
+
+  .valor {
+    font-size: 2rem;
+  }
+
+  .mensal {
+    font-size: 0.7rem;
+  }
+
+
+
+  #wpp1 h2 {
+    margin-right: 18%;
+    margin-left: 0;
+    font-size: 0.9rem;
+
+  }
+
+  #wpp1 img {
+    width: 23%;
+  }
+
+}
+
+@media only screen and (max-width:800px) {
+
+  .valor {
+    font-size: 1.7rem;
+  }
+
+}
+
+
+@media only screen and (max-width:700px) {
+
+  #contatoMenu p {
+    font-size: 0.7rem;
+  }
+
+  .valor {
+    font-size: 1.6rem;
+  }
+
+  #nmEmpresa {
+    font-size: 10vw;
+  }
+
+  #logoimg {
+    height: 4rem;
+    width: 4.6rem;
+    padding-top: 0.2rem;
+    padding-left: 0.5rem;
+  }
+
+  header {
+    height: 66px;
+  }
+
+  #subtitulo {
+    font-size: 4.1vw;
+    color: #054599;
+    text-shadow: 2px 3px 7px #054599;
+  }
+
+  #txtEntrada {
+    font-size: 2vw;
+    font-family: 'Merriweather-Regular';
+    color: #054599;
+    margin-bottom: 3%;
+  }
+
+  #sobre2 {
+    width: 55%;
+    height: 20%;
+    font-size: 2vw;
+    margin-top: 4.5%;
+  }
+
+
+  #redes {
+    width: 13%;
+  }
+
+  #wpp1 img {
+    width: 42%;
+  }
+
+  #wpp1 h2 {
+    font-size: 0.9rem;
+
+  }
+
+  #img1 {
+    width: 60%;
+    height: 35vw;
+
+  }
+
+}
+
+@media only screen and (max-width:650px) {
+
+  .pergunta,
+  .resposta {
+    font-size: 1.1rem;
+  }
+
+  .planosAzul,
+  .planosLaranja {
+    border-top-left-radius: 40px;
+  }
+
+  .MBAzul,
+  .MBlaranja {
+    font-size: 1.3rem;
+  }
+
+  .valor {
+    font-size: 1.2rem;
+
+  }
+
+  #contatoMenu p {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width:500px) {
+
+  #logoimg {
+    width: 4rem;
+    height: 3.7rem;
+  }
+
+  #contatoMenu p {
+    font-size: 0.6rem;
+    margin-top: 15%;
+
+  }
+
+  #titulofaq {
+    font-size: 2.3rem;
+  }
+
+  .pergunta,
+  .resposta {
+    font-size: 1rem;
+  }
+
+  #planos {
+    margin-top: 0;
+  }
+
+  #planos1,
+  #planos2 {
+    height: 20%;
+
+  }
+
+  .planosAzul,
+  .planosLaranja {
+    border-top-left-radius: 40px;
+  }
+
+  #sobre2 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    height: 5%;
+  }
+
+  .MBAzul,
+  .MBlaranja {
+    font-size: 1.1rem;
+  }
+
+  .valor {
+    font-size: 0.9rem;
+
+  }
+
+}
+
+@media only screen and (max-width:400px) {
+  hr {
+    height: 4px;
+  }
+
+  #hamburg {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    width: 0rem;
+  }
+
+  #contatoMenu p {
+    font-size: 10px;
+    margin-top: 11%;
+
+  }
+
+  #logoimg {
+    margin-top: 8%;
+    margin-left: 0;
+    width: 3.5rem;
+    height: 3rem;
+  }
+
+  #sobre2 {
+    height: 7%;
+  }
+
+  #empresa {
+    height: 0;
+  }
+
+  #tituloPlanos {
+    font-size: 2.5rem;
+  }
+
+  #titulofaq {
+    font-size: 2rem;
+  }
+
+
+  .pergunta,
+  .resposta {
+    font-size: 1rem;
+  }
+
+  #planos {
+    margin-top: 0;
+  }
+
+  #planos1,
+  #planos2 {
+    height: 23%;
+    border-top-left-radius: 10px;
+  }
+
+  .planosAzul,
+  .planosLaranja {
+    border-top-left-radius: 40px;
+  }
+
+  #sobre2 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .MBAzul,
+  .MBlaranja {
+    font-size: 0.9rem;
+  }
+
+  .valor {
+    font-size: 0.8rem;
+
+  }
+
+}
